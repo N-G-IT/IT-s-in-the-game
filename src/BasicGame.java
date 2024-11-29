@@ -39,7 +39,7 @@ public class BasicGame implements GameLoop {
 
             // close game
 
-        //hallo
+
         } else if (choice == 1) {
 
             // kies engelse woordenlijst
