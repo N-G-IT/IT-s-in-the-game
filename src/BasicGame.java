@@ -4,6 +4,8 @@ import nl.saxion.app.interaction.GameLoop;
 import nl.saxion.app.interaction.KeyboardEvent;
 import nl.saxion.app.interaction.MouseEvent;
 
+import java.util.ArrayList;
+
 public class BasicGame implements GameLoop {
 
 
@@ -102,6 +104,16 @@ public class BasicGame implements GameLoop {
 
 
 
+    }
+
+    // NL woordenlijst
+    public String woordenlijstnl(String woordnl) {
+        ArrayList<String> woorden = new ArrayList<>();
+        woorden.add("Avontuur");
+        woorden.add("Zandloper");
+        woorden.add("Muzieknoot");
+        woordnl = woorden.get(SaxionApp.getRandomValueBetween(0,2));
+        return woordnl;
     }
 }
 
