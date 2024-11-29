@@ -16,10 +16,12 @@ public class BasicGame implements GameLoop {
 
 
     public static void main(String[] args) {
-        SaxionApp.startGameLoop(new BasicGame(), 1000, 775, 40);
+        SaxionApp.startGameLoop(new BasicGame(), 1000, 1000, 40);
     }
+
     public void backround() {
         SaxionApp.drawImage("IT-s-in-the-game2024/Recourses/IMG_3813.jpg", 0,0, 1000, 775);
+
     }
 
     int x,y;
@@ -71,20 +73,34 @@ public class BasicGame implements GameLoop {
 
     @Override
     public void init() {
-        backround();
+        x = 500;
+        y = 500;
     }
 
     @Override
     public void loop() {
+        SaxionApp.drawCircle(x,y,100);
     }
 
     @Override
     public void keyboardEvent(KeyboardEvent keyboardEvent) {
 
+        if (keyboardEvent.isShiftDown()){
+            SaxionApp.clear();
+        }
+
+
+
     }
 
     @Override
     public void mouseEvent(MouseEvent mouseEvent) {
+        x = mouseEvent.getX();
+        y = mouseEvent.getY();
+
+
+
+
 
     }
 }
