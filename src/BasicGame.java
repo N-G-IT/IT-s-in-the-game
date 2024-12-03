@@ -22,7 +22,7 @@ public class BasicGame implements GameLoop {
     }
 
     public void backround() {
-        SaxionApp.drawImage("IT-s-in-the-game2024/Recourses/IMG_3813.jpg", 0,0, 1000, 775);
+        SaxionApp.drawImage("IT-s-in-the-game2024/Recourses/IMG_3813.png", 0,0, 1000, 775);
 
     }
 
