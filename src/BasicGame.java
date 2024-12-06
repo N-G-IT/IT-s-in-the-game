@@ -1,3 +1,110 @@
+//import nl.saxion.app.SaxionApp;
+//
+//import nl.saxion.app.interaction.GameLoop;
+//import nl.saxion.app.interaction.KeyboardEvent;
+//import nl.saxion.app.interaction.MouseEvent;
+//
+//import java.util.ArrayList;
+//
+//public class BasicGame implements GameLoop {
+//
+//
+//
+//    public static void main(String[] args) {
+//        SaxionApp.startGameLoop(new BasicGame(), 1000, 775, 40);
+//    }
+//
+//    public void backround() {
+//
+//
+//    }
+//
+//    int x,y;
+//
+//
+//    public void doStuff() {
+//        SaxionApp.printLine("Maka a choice:");
+//        SaxionApp.printLine("0 is close the game");
+//        SaxionApp.printLine("1 is the EN word list");
+//        SaxionApp.printLine("2 is the Nl word list");
+//        SaxionApp.print("Chose one of the above: ");
+//
+//        int choice = SaxionApp.readInt();
+//
+//
+//        if (choice == 0) {
+//
+//            // close game
+//
+//
+//        } else if (choice == 1) {
+//
+//            // kies engelse woordenlijst
+//
+//        } else if (choice == 2) {
+//
+//            // kies nederlandese woordenlijst
+//
+//        }
+//    }
+//
+//
+//
+//
+//    private boolean initialized = false;
+//
+//
+//
+//
+//
+//    @Override
+//    public void init() {
+//        SaxionApp.drawImage("BasicGame/IMG_3813.png", 0,0, 1000, 775);
+//    }
+//
+//
+//
+//    @Override
+//    public void loop() {
+//        if (!initialized) {
+//            init();
+//            initialized = true;
+//        }
+//        doStuff();
+//    }
+//
+//    @Override
+//    public void keyboardEvent(KeyboardEvent keyboardEvent) {
+//
+//
+//
+//
+//
+//    }
+//
+//    @Override
+//    public void mouseEvent(MouseEvent mouseEvent) {
+//
+//
+//
+//
+//
+//
+//    }
+//
+//    // NL woordenlijst
+//    public String woordenlijstnl(String woordnl) {
+//        ArrayList<String> woorden = new ArrayList<>();
+//        woorden.add("Avontuur");
+//        woorden.add("Zandloper");
+//        woorden.add("Muzieknoot");
+//        woordnl = woorden.get(SaxionApp.getRandomValueBetween(0,2));
+//        return woordnl;
+//    }
+//}
+//
+//
+
 
 import nl.saxion.app.SaxionApp;
 import nl.saxion.app.interaction.GameLoop;
@@ -19,7 +126,7 @@ public class BasicGame implements GameLoop {
     @Override
     public void init() {
         // Laad achtergrondafbeelding
-        //SaxionApp.drawImage("Recources/IMG_3813.png", 0, 0, 1000, 775);
+        // SaxionApp.drawImage("Sandbox/BasicGame/IMG_3813.png", 0, 0, 1000, 775);
     }
 
     @Override
@@ -54,24 +161,6 @@ public class BasicGame implements GameLoop {
         } else {
             SaxionApp.drawText("Ongeldige keuze. Probeer opnieuw.",80,168,22);
         }
-
-
-//        switch (userChoice) {
-//            case 0:
-//                SaxionApp.drawText("Spel wordt gesloten.", 80, 168, 22);
-//                System.exit(0);
-//                break;
-//            case 1:
-//                SaxionApp.drawText("Engelse woordenlijst wordt gekozen.", 80, 168, 22);
-//                break;
-//            case 2:
-//                String woord = woordenlijstnl();
-//                SaxionApp.drawText("Gekozen woord: " + woord, 80, 168, 22);
-//                break;
-//            case -1:
-//                SaxionApp.drawText("Kies een optie met toetsenbord.", 80, 138, 22);
-//                break;
-//        }
     }
 
     @Override
@@ -84,12 +173,22 @@ public class BasicGame implements GameLoop {
         // Event-afhandeling voor muis
     }
 
+    // Nederlandse woordenlijst & random woord kiezen
     public String woordenlijstnl() {
         ArrayList<String> woorden = new ArrayList<>();
         woorden.add("Avontuur");
         woorden.add("Zandloper");
         woorden.add("Muzieknoot");
         return woorden.get(SaxionApp.getRandomValueBetween(0, 2));
+    }
+
+    // Engelse woordenlijst & random woord kiezen
+    public String woordenlijsteng() {
+        ArrayList<String> words = new ArrayList<>();
+        words.add("Apple");
+        words.add("Car");
+        words.add("House");
+        return words.get(SaxionApp.getRandomValueBetween(0, 2));
     }
 }
 
