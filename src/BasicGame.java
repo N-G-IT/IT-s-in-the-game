@@ -147,17 +147,19 @@ public class BasicGame implements GameLoop {
         SaxionApp.drawText("Kies een optie: ",80,138,22);
 
         int choice = SaxionApp.readInt();
+        SaxionApp.drawText("Input received: " + choice, 80, 200, 22);
+
 
         if (choice == 0) {
-            SaxionApp.printLine("Spel wordt gesloten.");
+            SaxionApp.drawText("Spel wordt gesloten.",80,168,22);
             System. exit(0); // Sluit het programma
         } else if (choice == 1) {
-            SaxionApp.printLine("Engelse woordenlijst wordt gekozen.");
+            SaxionApp.drawText("Engelse woordenlijst wordt gekozen.",80,168,22);
         } else if (choice == 2) {
             String woord = woordenlijstnl();
-            SaxionApp.printLine("Gekozen woord: " + woord);
+            SaxionApp.drawText("Gekozen woord: " + woord,80,168,22);
         } else {
-            SaxionApp.printLine("Ongeldige keuze. Probeer opnieuw.");
+            SaxionApp.drawText("Ongeldige keuze. Probeer opnieuw.",80,168,22);
         }
     }
 
