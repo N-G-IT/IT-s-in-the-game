@@ -1,111 +1,3 @@
-//import nl.saxion.app.SaxionApp;
-//
-//import nl.saxion.app.interaction.GameLoop;
-//import nl.saxion.app.interaction.KeyboardEvent;
-//import nl.saxion.app.interaction.MouseEvent;
-//
-//import java.util.ArrayList;
-//
-//public class BasicGame implements GameLoop {
-//
-//
-//
-//    public static void main(String[] args) {
-//        SaxionApp.startGameLoop(new BasicGame(), 1000, 775, 40);
-//    }
-//
-//    public void backround() {
-//
-//
-//    }
-//
-//    int x,y;
-//
-//
-//    public void doStuff() {
-//        SaxionApp.printLine("Maka a choice:");
-//        SaxionApp.printLine("0 is close the game");
-//        SaxionApp.printLine("1 is the EN word list");
-//        SaxionApp.printLine("2 is the Nl word list");
-//        SaxionApp.print("Chose one of the above: ");
-//
-//        int choice = SaxionApp.readInt();
-//
-//
-//        if (choice == 0) {
-//
-//            // close game
-//
-//
-//        } else if (choice == 1) {
-//
-//            // kies engelse woordenlijst
-//
-//        } else if (choice == 2) {
-//
-//            // kies nederlandese woordenlijst
-//
-//        }
-//    }
-//
-//
-//
-//
-//    private boolean initialized = false;
-//
-//
-//
-//
-//
-//    @Override
-//    public void init() {
-//        SaxionApp.drawImage("BasicGame/IMG_3813.png", 0,0, 1000, 775);
-//    }
-//
-//
-//
-//    @Override
-//    public void loop() {
-//        if (!initialized) {
-//            init();
-//            initialized = true;
-//        }
-//        doStuff();
-//    }
-//
-//    @Override
-//    public void keyboardEvent(KeyboardEvent keyboardEvent) {
-//
-//
-//
-//
-//
-//    }
-//
-//    @Override
-//    public void mouseEvent(MouseEvent mouseEvent) {
-//
-//
-//
-//
-//
-//
-//    }
-//
-//    // NL woordenlijst
-//    public String woordenlijstnl(String woordnl) {
-//        ArrayList<String> woorden = new ArrayList<>();
-//        woorden.add("Avontuur");
-//        woorden.add("Zandloper");
-//        woorden.add("Muzieknoot");
-//        woordnl = woorden.get(SaxionApp.getRandomValueBetween(0,2));
-//        return woordnl;
-//    }
-//}
-//
-//
-
-
 import nl.saxion.app.SaxionApp;
 import nl.saxion.app.interaction.GameLoop;
 import nl.saxion.app.interaction.KeyboardEvent;
@@ -179,7 +71,7 @@ public class BasicGame implements GameLoop {
         woorden.add("Avontuur");
         woorden.add("Zandloper");
         woorden.add("Muzieknoot");
-        return woorden.get(SaxionApp.getRandomValueBetween(0, 2));
+        return woorden.get(SaxionApp.getRandomValueBetween(0, woorden.size()-1));
     }
 
     // Engelse woordenlijst & random woord kiezen
@@ -188,7 +80,7 @@ public class BasicGame implements GameLoop {
         words.add("Apple");
         words.add("Car");
         words.add("House");
-        return words.get(SaxionApp.getRandomValueBetween(0, 2));
+        return words.get(SaxionApp.getRandomValueBetween(0, words.size()-1));
     }
 }
 
