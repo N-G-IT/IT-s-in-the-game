@@ -1,9 +1,9 @@
-import nl.saxion.app.SaxionApp;
-import nl.saxion.app.interaction.GameLoop;
-import nl.saxion.app.interaction.KeyboardEvent;
-import nl.saxion.app.interaction.MouseEvent;
+    import nl.saxion.app.SaxionApp;
+    import nl.saxion.app.interaction.GameLoop;
+    import nl.saxion.app.interaction.KeyboardEvent;
+    import nl.saxion.app.interaction.MouseEvent;
 
-import java.util.ArrayList;
+    import java.util.ArrayList;
 
 public class BasicGame implements GameLoop {
 
@@ -21,7 +21,7 @@ public class BasicGame implements GameLoop {
     @Override
     public void init() {
         // Laad achtergrondafbeelding
-        SaxionApp.drawImage("BasicGame/IMG_3813.png", 0, 0, 1000, 775);
+        SaxionApp.drawImage("IMG_3813.png", 0, 0, 1000, 775);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class BasicGame implements GameLoop {
         SaxionApp.drawText("2 is de Nederlandse woordenlijst", 80, 108, 22);
         SaxionApp.drawText("Kies een optie: ", 80, 138, 22);
 
-        SaxionApp.drawText("Input received: ", 80, 200, 22);
+        //mouseEvent();
 
 
 //        if (LastKeyPressed == KeyboardEvent.VK_0) {
@@ -124,6 +124,11 @@ public class BasicGame implements GameLoop {
     @Override
     public void mouseEvent(MouseEvent mouseEvent) {
         // Event-afhandeling voor muis
+
+        mouseEvent.getX();
+        mouseEvent.getY();
+
+
     }
 
     // Nederlandse woordenlijst & random woord kiezen
