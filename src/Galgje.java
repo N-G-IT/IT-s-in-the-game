@@ -1,4 +1,6 @@
 import nl.saxion.app.SaxionApp;
+
+import java.awt.*;
 import java.util.ArrayList;
 
 
@@ -10,8 +12,9 @@ public class Galgje implements Runnable {
 
     public void run(){
 
+        SaxionApp.setBackgroundColor(new Color(112, 169, 207));
         // Woordenlijst
-        String[] woorden = {"computer", "programmeren", "java", "galgje", "technologie"};
+        String[] woorden = {"programmeren"};
         String woord = woorden[(int) (Math.random() * woorden.length)];
 
         // Variabelen voor het spel
@@ -28,7 +31,7 @@ public class Galgje implements Runnable {
         // Spel loop
         while (fouten < maximaleFouten && !geraden) {
             // Toon de status van het spel
-            SaxionApp.printLine("\nGalgje: " + tekenGalgje(fouten));
+            SaxionApp.printLine("\n\nGalgje: " + tekenGalgje(fouten));
             SaxionApp.print("Huidige woord: ");
             SaxionApp.printLine(geradenWoord);
 
