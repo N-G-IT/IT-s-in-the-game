@@ -1,10 +1,15 @@
 import nl.saxion.app.SaxionApp;
-
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class Galgje {
+
+public class Galgje implements Runnable {
     public static void main(String[] args) {
+        SaxionApp.start(new Galgje(), 640, 480);
+    }
+
+
+    public void run(){
+
         // Woordenlijst
         String[] woorden = {"computer", "programmeren", "java", "galgje", "technologie"};
         String woord = woorden[(int) (Math.random() * woorden.length)];
@@ -18,18 +23,19 @@ public class Galgje {
         int maximaleFouten = 6;
         boolean geraden = false;
 
-        Scanner scanner = new Scanner(System.in);
+
 
         // Spel loop
         while (fouten < maximaleFouten && !geraden) {
             // Toon de status van het spel
-            System.out.println("\nGalgje: " + tekenGalgje(fouten));
-            System.out.print("Huidige woord: ");
-            System.out.println(geradenWoord);
+            SaxionApp.printLine("\nGalgje: " + tekenGalgje(fouten));
+            SaxionApp.print("Huidige woord: ");
+            SaxionApp.printLine(geradenWoord);
 
             // Vraag een letter
-            System.out.print("Raad een letter: ");
-            char letter = scanner.nextLine().toLowerCase().charAt(0);
+            SaxionApp.print("Raad een letter: ");
+            char letter = SaxionApp.readChar();
+
 
             // Controleer of de letter in het woord zit
             boolean goedGeraad = false;
@@ -42,9 +48,9 @@ public class Galgje {
 
             if (!goedGeraad) {
                 fouten++;
-                System.out.println("Verkeerd! Je hebt nu " + fouten + " fout(en).");
+                SaxionApp.printLine("Verkeerd! Je hebt nu " + fouten + " fout(en).");
             } else {
-                System.out.println("Goed gedaan!");
+                SaxionApp.printLine("Goed gedaan!");
             }
 
             // Controleer of het hele woord is geraden
@@ -53,9 +59,9 @@ public class Galgje {
 
         // Spel beëindigen
         if (geraden) {
-            System.out.println("\nGefeliciteerd! Je hebt het woord geraden: " + woord);
+            SaxionApp.printLine("\nGefeliciteerd! Je hebt het woord geraden: " + woord);
         } else {
-            System.out.println("\nGame over! Het woord was: " + woord);
+            SaxionApp.printLine("\nGame over! Het woord was: " + woord);
         }
     }
 
