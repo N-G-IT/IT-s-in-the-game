@@ -30,7 +30,7 @@ public class Galgje implements Runnable {
                     "computer", "programming", "java", "hangman", "technology",
                     "internet", "development", "hardware", "software", "memory",
                     "keyboard", "mouse", "screen", "laptop", "game",
-                    "database", "network", "processor", "operating system", "security"
+                    "database", "network", "processor", "operatingsystem", "security"
             };
 
             // Laat de speler een taal kiezen
