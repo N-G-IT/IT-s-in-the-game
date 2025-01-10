@@ -10,14 +10,34 @@ public class Galgje implements Runnable {
 
     public void backgroundColor() {
         SaxionApp.setBackgroundColor(new Color(112, 169, 207));
+
     }
+
+    public void aardvark(){
+
+        // Breedte en hoogte van het venster
+        int schermBreedte = SaxionApp.getWidth();
+        int schermHoogte = SaxionApp.getHeight();
+
+        // Breedte en hoogte van de afbeelding
+        int afbeeldingBreedte = 100;
+        int afbeeldingHoogte = 100;
+
+        // Plaatsing in de rechteronderhoek
+        int xPositie = schermBreedte - afbeeldingBreedte - 10; // 10 pixels vanaf de rechterrand
+        int yPositie = schermHoogte - afbeeldingHoogte - 10; // 10 pixels vanaf de onderrand
+
+        SaxionApp.drawImage("BasicGame/Aardvark.png", xPositie, yPositie, afbeeldingBreedte, afbeeldingHoogte);
+    }
+
+
 
     @Override
     public void run() {
         boolean opnieuwSpelen;
         do {
             backgroundColor();
-
+            aardvark();
             // Nederlandse en Engelse woordenlijsten
             String[] woordenNederlands = {
                     "computer", "programmeren", "java", "galgje", "technologie",
