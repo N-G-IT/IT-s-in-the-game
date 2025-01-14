@@ -54,13 +54,13 @@ public class Galgje implements Runnable {
             };
 
             // Laat de speler een taal kiezen
-            SaxionApp.printLine("Kies een taal (type 'Nederlands' of 'English'):");
+            SaxionApp.printLine("Kies een taal (type 'Nederlands'(n) of 'English'(e)):");
             String taal = SaxionApp.readString().toLowerCase();
 
             // Kies de juiste woordenlijst en teksten
             String[] woorden;
             String vraagLetter, foutGok, goedGok, huidigWoord, aantalFoutenTekst, galgjeGefeliciteerd, galgjeGameOver;
-            if (taal.equals("nederlands")) {
+            if (taal.equals("nederlands") || taal.equals("n")) {
                 woorden = woordenNederlands;
                 vraagLetter = "Raad een letter: ";
                 foutGok = "Fout! De letter zit niet in het woord.";
@@ -100,6 +100,7 @@ public class Galgje implements Runnable {
                 SaxionApp.clear();
                 SaxionApp.print("\n\n\n");
                 SaxionApp.printLine(tekenGalgje(fouten));
+                aardvark();
                 SaxionApp.print(huidigWoord);
                 toonWoord(geradenWoord);
                 SaxionApp.printLine("\n" + aantalFoutenTekst + fouten + " / " + maximaleFouten);
