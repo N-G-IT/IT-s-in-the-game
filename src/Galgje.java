@@ -27,7 +27,7 @@ public class Galgje implements Runnable {
         int xPositie = schermBreedte - afbeeldingBreedte - 10; // 10 pixels vanaf de rechterrand
         int yPositie = schermHoogte - afbeeldingHoogte - 10; // 10 pixels vanaf de onderrand
 
-        SaxionApp.drawImage("Aardvark.png", xPositie, yPositie, afbeeldingBreedte, afbeeldingHoogte);
+        SaxionApp.drawImage("BasicGame/Aardvark.png", xPositie, yPositie, afbeeldingBreedte, afbeeldingHoogte);
     }
 
 
@@ -81,7 +81,7 @@ public class Galgje implements Runnable {
             }
 
             // Kies een willekeurig woord
-            String woord = woorden[(int) (Math.random() * woorden.length)];
+            String woord = woorden[SaxionApp.getRandomValueBetween(0,woorden.length )];
 
             // Variabelen voor het spel
             char[] geradenWoord = new char[woord.length()];
@@ -146,7 +146,7 @@ public class Galgje implements Runnable {
             // Vraag of de speler opnieuw wil spelen
             String opnieuwInput;
             do {
-                if (taal.equals("nederlands")) {
+                if (taal.equals("nederlands") || taal.equals("n")) {
                     SaxionApp.printLine("\nWil je opnieuw spelen? (type 'ja' of 'nee'):");
                 } else {
                     SaxionApp.printLine("\nDo you want to play again? (type 'yes' or 'no'):");
