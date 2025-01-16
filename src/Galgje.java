@@ -27,7 +27,7 @@ public class Galgje implements Runnable {
         int xPositie = schermBreedte - afbeeldingBreedte - 10; // 10 pixels vanaf de rechterrand
         int yPositie = schermHoogte - afbeeldingHoogte - 10; // 10 pixels vanaf de onderrand
 
-        SaxionApp.drawImage("BasicGame/Aardvark.png", xPositie, yPositie, afbeeldingBreedte, afbeeldingHoogte);
+        SaxionApp.drawImage("Aardvark.png", xPositie, yPositie, afbeeldingBreedte, afbeeldingHoogte);
     }
 
 
@@ -55,7 +55,7 @@ public class Galgje implements Runnable {
 
             // Laat de speler een taal kiezen
             SaxionApp.printLine("Kies een taal (type 'Nederlands'(n) of 'English'(e)):");
-            String taal = SaxionApp.readString().toLowerCase();
+            String taal = SaxionApp.readString(SaxionApp.SAXION_PINK).toLowerCase();
 
             // Kies de juiste woordenlijst en teksten
             String[] woorden;
@@ -152,7 +152,7 @@ public class Galgje implements Runnable {
                     SaxionApp.printLine("\nDo you want to play again? (type 'yes' or 'no'):");
                 }
 
-                opnieuwInput = SaxionApp.readString().toLowerCase();
+                opnieuwInput = SaxionApp.readString(SaxionApp.SAXION_PINK).toLowerCase();
 
                 // Check voor 'ja'/'nee' of 'yes'/'no'
                 opnieuwSpelen = opnieuwInput.equals("ja") || opnieuwInput.equals("yes");

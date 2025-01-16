@@ -13,7 +13,6 @@ public class BasicGame implements GameLoop {
 
 
 
-
     public static void main(String[] args) {
         SaxionApp.startGameLoop(new BasicGame(), 1000, 775, 40);
     }
