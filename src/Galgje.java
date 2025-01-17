@@ -30,7 +30,10 @@ public class Galgje implements Runnable {
         SaxionApp.drawImage("BasicGame/Aardvark.png", xPositie, yPositie, afbeeldingBreedte, afbeeldingHoogte);
     }
 
+    public void achtergrondMuziek () {
 
+
+    }
 
     @Override
     public void run() {
