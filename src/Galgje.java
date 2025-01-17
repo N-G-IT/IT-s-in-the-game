@@ -40,6 +40,7 @@ public class Galgje implements Runnable {
         boolean opnieuwSpelen;
         do {
             backgroundColor();
+            achtergrondMuziek();
             aardvark();
             // Nederlandse en Engelse woordenlijsten
             String[] woordenNederlands = {
