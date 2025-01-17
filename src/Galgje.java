@@ -31,7 +31,7 @@ public class Galgje implements Runnable {
     }
 
     public void achtergrondMuziek () {
-
+        SaxionApp.playSound("BasicGame/Recourses/achtergrond_muziek.wav", true);
 
     }
 
