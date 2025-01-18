@@ -1,7 +1,42 @@
+Dit is de technische documentatie
 
+(Regel 36)
+Onze code bestaad uit een Do-While loop, zodat er vaker achter elkaar gespeeld kan worden.
 
+(Regel 40)
+We hebben de woordenlijst in een array gezet om makkelijk met getRandomValue een random woord uit te kunnen kiezen.
 
+(Regel 60)
+Doormiddel van het gebruik van variablen voor de zinnen van het spel. kan er worden gekozen door de speler welke taal
+wordt weergeven/geraden.
 
+(Regel 85)
+Met het gebruik van een Char array worden er letters en _ op de plek van het te raden woord gezet.
+
+(Regel 90)
+Hier worden de fout geraden letters ingezet.
+
+(Regel 96)
+In deze while loop word het galgje getekenk met de relevante informatie.
+
+(Regel 111)
+Hier leest de code wat voor letter je invoerd
+
+(Regel 114)
+Checkt of de letter in het woord zit en voegd deze aan de goede lijst toe.
+
+(Regel 138)
+Laad zien of het woord is geraden en wat het was
+
+(Regel 146)
+Hier vraagd de code of de speler nog een keer wilt spelen. zo ja dan kan je het spel opnieuw spelen
+anders met nee sluit hij af.
+
+(Regel 171)
+Hier word de galg getekend en met het aantal fouten word er een stuk gekozen om te laten zien.
+
+(Regel 241)
+Hier laat de code zien welke letter zijn geraden
 
 
 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Galgje implements Runnable {
     public static void main(String[] args) {
-        SaxionApp.start(new Galgje(), 640, 480);
+        SaxionApp.start(new Galgje(), 800, 480);
     }
 
     public void backgroundColor() {
@@ -58,7 +58,7 @@ public class Galgje implements Runnable {
             };
 
             // Laat de speler een taal kiezen
-            SaxionApp.printLine("Kies een taal (type 'Nederlands'(n) of 'English'(e)):");
+            SaxionApp.printLine("Kies een taal / Choose a language (type 'Nederlands'(n) of 'English'(e)):");
             String taal = SaxionApp.readString(SaxionApp.SAXION_PINK).toLowerCase();
 
             // Kies de juiste woordenlijst en teksten
@@ -105,6 +105,7 @@ public class Galgje implements Runnable {
                 SaxionApp.print("\n\n\n");
                 SaxionApp.printLine(tekenGalgje(fouten));
                 aardvark();
+                SaxionApp.printLine("Thema / Theme: technologie");
                 SaxionApp.print(huidigWoord);
                 toonWoord(geradenWoord);
                 SaxionApp.printLine("\n" + aantalFoutenTekst + fouten + " / " + maximaleFouten);
